@@ -11,6 +11,8 @@ public class RotationArrow : MonoBehaviour
     [SerializeField]private Image arrowImg;
     //Angle
     public float zRotate;
+    public bool liberaRot = false;
+    public bool liberaBola = false;
 
     void Start()
     {
@@ -18,11 +20,12 @@ public class RotationArrow : MonoBehaviour
         PosicionaBola();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        rotacaoArrow ();
+        RotacaoArrow ();
         InputDeRotacao ();
+        LimitaRotacao (); 
     }
 
     void PosicionaArrow()
@@ -34,20 +37,58 @@ public class RotationArrow : MonoBehaviour
         this.gameObject.transform.position = startPoss.position;
     }
 
-    void rotacaoArrow()
+    void RotacaoArrow()
     {
         arrowImg.rectTransform.eulerAngles = new Vector3 (0,0,zRotate);
     }
 
     void InputDeRotacao()
     {
-     if(Input.GetKey(KeyCode.UpArrow))
-     {
-        zRotate += 1.5f;
-     }
-     if(Input.GetKey(KeyCode.DownArrow))
-     {
-        zRotate -= 1.5f;
-     }
+ 
+        if(liberaRot == true)
+        {
+    
+            float moveY = Input.GetAxis ("Mouse Y");
+
+            if(zRotate < 90)
+            {
+                if(moveY > 0)
+                {
+                    zRotate += 1.5f;
+                }
+            }
+
+            if(zRotate > 0)
+            {
+                if(moveY < 0)
+                {
+                    zRotate -= 1.5f;
+                }
+            }
+
+        }
+    }
+
+    void LimitaRotacao()
+    {
+        if(zRotate >= 90 )
+        {
+            zRotate = 90;
+        }
+        if(zRotate <= 0)
+        {
+            zRotate = 0;
+        }
+    }
+
+    void OnMouseDown()
+    {
+        liberaRot = true;
+    }
+
+    void OnMouseUp()
+    {
+        liberaRot = false;
+        liberaBola = true;
     }
 }
