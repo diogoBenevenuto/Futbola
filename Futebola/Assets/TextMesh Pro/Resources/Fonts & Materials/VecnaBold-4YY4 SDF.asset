@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: VecnaBold-4YY4 SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -2111081754
   material: {fileID: 8872551233304698475}
-  materialHashCode: 0
+  materialHashCode: 172716166
   m_Version: 1.1.0
   m_SourceFontFileGUID: 27da1d49e8e18514a8eee5c88febf2d9
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 27da1d49e8e18514a8eee5c88febf2d9, type: 3}
@@ -6678,9 +6678,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.9
+    - _ScaleRatioB: 0.73125
+    - _ScaleRatioC: 0.73125
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
