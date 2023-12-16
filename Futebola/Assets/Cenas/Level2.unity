@@ -831,6 +831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108696642462128808, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -908,6 +912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108696642462128808, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1048,6 +1056,10 @@ PrefabInstance:
     - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
       propertyPath: m_TranslationLimits.m_UpperTranslation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181836288214120068, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -43,12 +43,12 @@ public class NewBehaviourScript : MonoBehaviour
 
             if(moveX < 0)
             {
-                seta2Img.fillAmount += 1 * Time.deltaTime;
+                seta2Img.fillAmount += 0.8f * Time.deltaTime;
                 force = seta2Img.fillAmount * 1000;
             }
             if(moveX > 0)
             {
-                seta2Img.fillAmount -= 1 * Time.deltaTime;
+                seta2Img.fillAmount -= 0.8f * Time.deltaTime;
                 force = seta2Img.fillAmount * 1000;
             }
         }

@@ -8,6 +8,7 @@ public class RotationArrow : MonoBehaviour
     //position arrow
     [SerializeField]private Transform startPoss;
     // arrow
+    public GameObject arrowGO;
     [SerializeField]private Image arrowImg;
     //Angle
     public float zRotate;
@@ -16,7 +17,6 @@ public class RotationArrow : MonoBehaviour
 
     void Start()
     {
-        PosicionaArrow();
         PosicionaBola();
     }
 
@@ -26,11 +26,12 @@ public class RotationArrow : MonoBehaviour
         RotacaoArrow ();
         InputDeRotacao ();
         LimitaRotacao (); 
+        PosicionaArrow();
     }
 
     void PosicionaArrow()
     {
-        arrowImg.rectTransform.position = startPoss.position;
+        arrowImg.rectTransform.position = transform.position;
     }
     void PosicionaBola()
     {
@@ -84,11 +85,13 @@ public class RotationArrow : MonoBehaviour
     void OnMouseDown()
     {
         liberaRot = true;
+        arrowGO.SetActive (true);
     }
 
     void OnMouseUp()
     {
         liberaRot = false;
         liberaBola = true;
+        arrowGO.SetActive (false);
     }
 }

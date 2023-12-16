@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Cenas/Level1.unity
+    guid: 16709252b021cab47bb53c212bdc4a4f
+  - enabled: 1
+    path: Assets/Cenas/Level2.unity
+    guid: 9f222d20305547c4290181ce47971096
+  - enabled: 1
+    path: Assets/Cenas/Level3.unity
+    guid: d33276171bc66d54388305a60bcc0bcd
+  - enabled: 1
+    path: Assets/Cenas/Level4.unity
+    guid: 1cde34126b88040498143c6422fa4600
+  - enabled: 1
+    path: Assets/Cenas/Level_Game.unity
+    guid: 215f1f58882d91d4a8114ae92fe67fe3
+  - enabled: 1
+    path: Assets/Cenas/LOJA_BALLS.unity
+    guid: 623b17d05b9233d47bfd132f1b790bf3
+  - enabled: 1
+    path: Assets/Cenas/Main_Menu.unity
+    guid: 2b8ccb3b95ece904ebb537b5de387585
   m_configObjects: {}

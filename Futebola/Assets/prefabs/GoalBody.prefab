@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923665898561106104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47381735, y: -0.5084944, z: -42.716972}
-  m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
+  m_LocalPosition: {x: -0.49, y: 0.18, z: -42.716972}
+  m_LocalScale: {x: 0.4264744, y: 0.4264744, z: 0.4264744}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6352071871024746154}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_Sprite: {fileID: 21300000, guid: eafe9f102a628ea468a244f37ddf9ed6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,7 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7389315072781789495}
-  - {fileID: 5695451980314308643}
+  - {fileID: 6893497936719272134}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -162,23 +162,27 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.47945976, y: 0.5032103}
-      - {x: -0.081159115, y: 0.4934728}
-      - {x: -0.59574795, y: 0.48778152}
-      - {x: -0.6546502, y: 0.54941905}
-      - {x: -0.73732144, y: 0.5169755}
-      - {x: -0.7353902, y: 0.40664446}
-      - {x: -0.3478737, y: 0.41239643}
-      - {x: 0.44045407, y: 0.41562736}
+    - - {x: 0.5496688, y: 0.5332997}
+      - {x: 0.16958666, y: 1.0150242}
+      - {x: -0.4735608, y: 1.7924167}
+      - {x: -2.180462, y: 1.7916601}
+      - {x: -2.249394, y: 1.8532974}
+      - {x: -2.432363, y: 1.8409138}
+      - {x: -2.4304323, y: 1.6603737}
+      - {x: -2.253542, y: 1.6661258}
+      - {x: -0.5200081, y: 1.6620297}
+      - {x: 0.46051365, y: 0.41562736}
       - {x: 0.882393, y: -0.13315177}
       - {x: 1.3381824, y: -0.7167578}
-      - {x: 2.1416574, y: -1.7282617}
-      - {x: 2.2194095, y: -1.6659942}
-      - {x: 1.8562293, y: -1.209084}
-      - {x: 1.3201561, y: -0.5428331}
-      - {x: 0.86440706, y: 0.03751582}
+      - {x: 2.1717467, y: -1.7984707}
+      - {x: 2.3197074, y: -1.6860538}
+      - {x: 1.9063783, y: -1.1890242}
+      - {x: 1.7396164, y: -0.99127626}
+      - {x: 1.3703051, y: -0.5027137}
+      - {x: 1.1416435, y: -0.20879412}
+      - {x: 0.9245858, y: 0.03751582}
   m_UseDelaunayMesh: 0
---- !u!1 &8121971319162109770
+--- !u!1 &8873811096755691698
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,37 +190,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5695451980314308643}
-  - component: {fileID: 3415016082957239787}
+  - component: {fileID: 6893497936719272134}
+  - component: {fileID: 7568017554603281724}
   m_Layer: 0
-  m_Name: FaceGoal
+  m_Name: FezGol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5695451980314308643
+--- !u!4 &6893497936719272134
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8121971319162109770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22778702, y: -0.31740522, z: -42.875435}
+  m_GameObject: {fileID: 8873811096755691698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6352071871024746154}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &3415016082957239787
+--- !u!60 &7568017554603281724
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8121971319162109770}
+  m_GameObject: {fileID: 8873811096755691698}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -239,7 +243,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -254,11 +258,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.17907572, y: 0.6880622}
-      - {x: -0.8990665, y: 0.6902745}
-      - {x: -0.899723, y: -1.3289133}
-      - {x: 0.5762321, y: -1.3346901}
-      - {x: 1.8098845, y: -1.3377306}
-      - {x: 1.4720702, y: -0.95525265}
-      - {x: 0.8124175, y: -0.08379322}
+    - - {x: -0.5681367, y: 1.624951}
+      - {x: -2.2293653, y: 1.6441396}
+      - {x: -2.2353835, y: -1.6612228}
+      - {x: 2.0649414, y: -1.73224}
+      - {x: 1.050231, y: -0.421355}
+      - {x: 0.6669879, y: 0.095965564}
   m_UseDelaunayMesh: 0
