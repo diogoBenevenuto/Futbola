@@ -6,6 +6,8 @@ TagManager:
   tags:
   - bola
   - ball
+  - morte
+  - win
   layers:
   - Default
   - TransparentFX

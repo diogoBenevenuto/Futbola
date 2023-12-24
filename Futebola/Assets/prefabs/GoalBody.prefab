@@ -116,7 +116,7 @@ Transform:
   - {fileID: 7389315072781789495}
   - {fileID: 6893497936719272134}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1541351171785410962
 PolygonCollider2D:
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 7568017554603281724}
   m_Layer: 0
   m_Name: FezGol
-  m_TagString: Untagged
+  m_TagString: win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
