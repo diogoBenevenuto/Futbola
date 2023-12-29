@@ -9,7 +9,9 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
     private Text pontoUI, bolasUI;
     [SerializeField]
-    private GameObject losePainel, winPainel;
+    private GameObject losePainel, winPainel, pausePainel;
+    [SerializeField]
+    private Button pauseBtn;
 
     void Awake()
     {
@@ -24,7 +26,7 @@ public class UiManager : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += MostraMoeda;
-        LigaDesligaPainel();
+        
     }
 
     void MostraMoeda(Scene cena, LoadSceneMode modo)
@@ -33,6 +35,12 @@ public class UiManager : MonoBehaviour
         bolasUI = GameObject.Find("bolasUI").GetComponent<Text> ();
         losePainel = GameObject.Find("LosePainel");
         winPainel = GameObject.Find("WinPainel");
+        pausePainel = GameObject.Find("PausePainel");
+        pauseBtn = GameObject.Find("pause").GetComponent<Button> ();
+
+        LigaDesligaPainel();
+
+        pauseBtn.onClick.AddListener (Pause);
     }
     
     public void UpdateUI()
@@ -55,10 +63,18 @@ public class UiManager : MonoBehaviour
     {
         StartCoroutine(tempo());
     }
+
+    void Pause()
+    {
+        pausePainel.SetActive(true);
+        pausePainel.GetComponent<Animator> ().Play ("MoveUI_Pause");
+        Time.timeScale = 0;
+    }
     IEnumerator tempo()
     {
         yield return new WaitForSeconds (0.001f);
         losePainel.SetActive(false);
         winPainel.SetActive(false);
+        pausePainel.SetActive(false);
     }
 }
