@@ -680,6 +680,7 @@ MonoBehaviour:
   bolasNum: 2
   bolasInScene: 0
   pos: {fileID: 0}
+  win: 0
   tiro: 0
 --- !u!1 &378217049
 GameObject:
@@ -1880,7 +1881,7 @@ GameObject:
   - component: {fileID: 940964365}
   - component: {fileID: 940964364}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2649,7 +2650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1435221270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2669,7 +2670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 552.99994, y: 274}
+  m_AnchoredPosition: {x: 569, y: 429}
   m_SizeDelta: {x: 54.18, y: 50.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1435221271
@@ -2684,7 +2685,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 26a8e13d97b5eaf438e45a5a44c3c083, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -3863,6 +3864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   losePainel: {fileID: 0}
   winPainel: {fileID: 0}
+  pausePainel: {fileID: 0}
+  pauseBtn: {fileID: 0}
 --- !u!4 &1797631629
 Transform:
   m_ObjectHideFlags: 0
