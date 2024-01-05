@@ -12,6 +12,8 @@ public class UiManager : MonoBehaviour
     private GameObject losePainel, winPainel, pausePainel;
     [SerializeField]
     private Button pauseBtn, pauseBtn_Return;
+    [SerializeField]
+    private Button btnNovamente, btnMenu;
 
     void Awake()
     {
@@ -38,11 +40,17 @@ public class UiManager : MonoBehaviour
         pausePainel = GameObject.Find("PausePainel");
         pauseBtn = GameObject.Find("pause").GetComponent<Button> ();
         pauseBtn_Return = GameObject.Find("BtnPlay").GetComponent <Button> ();
+        btnNovamente = GameObject.Find("BtnNovamente").GetComponent<Button>();
+        btnMenu = GameObject.Find("BtnMenu").GetComponent<Button>();
 
         LigaDesligaPainel();
 
         pauseBtn.onClick.AddListener (Pause);
         pauseBtn_Return.onClick.AddListener (PauseReturn);
+
+        //you lose
+
+        btnNovamente.onClick.AddListener(JogarNovamente);
     }
     
     public void UpdateUI()
@@ -92,5 +100,10 @@ public class UiManager : MonoBehaviour
         losePainel.SetActive(false);
         winPainel.SetActive(false);
         pausePainel.SetActive(false);
+    }
+
+    void JogarNovamente()
+    {
+        SceneManager.LoadScene(GameManager.instance.ondeEstou);
     }
 }
