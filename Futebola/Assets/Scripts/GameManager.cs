@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool win;
     public int tiro = 0;
     public int ondeEstou;
+    public bool jogoComecou;
 
     void Awake()
     {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         pos = GameObject.Find ("InitialPosition").GetComponent<Transform> ();
         ondeEstou = SceneManager.GetActiveScene().buildIndex;
+        StartGame();
     }
     void Start()
     {
@@ -72,9 +74,20 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         UiManager.instance.GameOverUI();
+        jogoComecou = false;
     }
     void WinGame()
     {
         UiManager.instance.WinGameUI();
+        jogoComecou = false;
+    }
+
+    void StartGame()
+    {
+        jogoComecou = true;
+        bolasNum = 2;
+        bolasInScene = 0;
+        UiManager.instance.StartUI();
+        
     }
 }

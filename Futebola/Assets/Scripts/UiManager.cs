@@ -15,6 +15,8 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private Button btnNovamente, btnMenu;
 
+    public int moedasNumAntes, moedasNumDepois, resultado;
+
     void Awake()
     {
         if(instance == null)
@@ -51,12 +53,18 @@ public class UiManager : MonoBehaviour
         //you lose
 
         btnNovamente.onClick.AddListener(JogarNovamente);
+        moedasNumAntes = PlayerPrefs.GetInt("moedasSave");
     }
     
+    public void StartUI()
+    {
+        LigaDesligaPainel();
+    }
     public void UpdateUI()
     {
         pontoUI.text = ScoreManager.instance.moedas.ToString();
         bolasUI.text = GameManager.instance.bolasNum.ToString();
+        moedasNumDepois = ScoreManager.instance.moedas;
     }
 
     public void GameOverUI()
@@ -105,5 +113,8 @@ public class UiManager : MonoBehaviour
     void JogarNovamente()
     {
         SceneManager.LoadScene(GameManager.instance.ondeEstou);
+        resultado = moedasNumDepois - moedasNumAntes;
+        ScoreManager.instance.PerdeMoedas(resultado);
+        resultado = 0;
     }
 }
