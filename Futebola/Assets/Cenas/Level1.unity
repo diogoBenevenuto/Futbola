@@ -682,7 +682,6 @@ MonoBehaviour:
   pos: {fileID: 0}
   win: 0
   tiro: 0
-  ondeEstou: 0
   jogoComecou: 0
 --- !u!1 &378217049
 GameObject:
@@ -824,7 +823,7 @@ GameObject:
   - component: {fileID: 437151297}
   - component: {fileID: 437151296}
   m_Layer: 5
-  m_Name: BtnAvancar
+  m_Name: BtnAvancarWIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,10 +1842,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1120001778939650923, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1984579615724238536, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2062,7 +2057,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1120001778939650923, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
       propertyPath: m_Mass
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1984579615724238536, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
       propertyPath: m_RootOrder
@@ -2341,7 +2336,7 @@ GameObject:
   - component: {fileID: 1112279511}
   - component: {fileID: 1112279510}
   m_Layer: 5
-  m_Name: BtnMenu
+  m_Name: BtnMenuWIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2542,10 +2537,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1120001778939650923, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1984579615724238536, guid: 3396fe99856a9f44ba05eb4bec66b6de, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3436,7 +3427,7 @@ GameObject:
   - component: {fileID: 1612839659}
   - component: {fileID: 1612839658}
   m_Layer: 5
-  m_Name: BtnMenu
+  m_Name: BtnFazesLOSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3589,7 +3580,7 @@ GameObject:
   - component: {fileID: 1749398989}
   - component: {fileID: 1749398988}
   m_Layer: 5
-  m_Name: BtnNovamenteW
+  m_Name: BtnNovamenteWIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3711,7 +3702,7 @@ GameObject:
   - component: {fileID: 1757295471}
   - component: {fileID: 1757295470}
   m_Layer: 5
-  m_Name: BtnNovamente
+  m_Name: BtnNovamenteLOSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3930,8 +3921,8 @@ MonoBehaviour:
   pausePainel: {fileID: 0}
   pauseBtn: {fileID: 0}
   pauseBtn_Return: {fileID: 0}
-  btnNovamente: {fileID: 0}
-  btnMenu: {fileID: 0}
+  btnNovamenteLose: {fileID: 0}
+  btnMenuLose: {fileID: 0}
   moedasNumAntes: 0
   moedasNumDepois: 0
   resultado: 0

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public Transform pos;
     public bool win;
     public int tiro = 0;
-    public int ondeEstou;
+    //public int ondeEstou;
     public bool jogoComecou;
 
     void Awake()
@@ -36,9 +36,13 @@ public class GameManager : MonoBehaviour
 
     void Carrega(Scene cena, LoadSceneMode modo)
     {
-        pos = GameObject.Find ("InitialPosition").GetComponent<Transform> ();
-        ondeEstou = SceneManager.GetActiveScene().buildIndex;
-        StartGame();
+        if(OndeEstou.instance.fase != 4)
+        {
+            pos = GameObject.Find("InitialPosition").GetComponent<Transform>();
+            //ondeEstou = SceneManager.GetActiveScene().buildIndex;
+            StartGame();
+        }
+        
     }
     void Start()
     {
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
         jogoComecou = true;
         bolasNum = 2;
         bolasInScene = 0;
+        win = false;
         UiManager.instance.StartUI();
         
     }

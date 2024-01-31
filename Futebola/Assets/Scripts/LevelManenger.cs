@@ -56,6 +56,14 @@ public class LevelManenger : MonoBehaviour
         {
             SceneManager.LoadScene (level);
         }
+
+    void Awake ()
+    {
+        Destroy(GameObject.Find("UiManager"));
+        Destroy(GameObject.Find("GameManager"));
+    }
+
+
     void Start()
     {
        // PlayerPrefs.DeleteAll();

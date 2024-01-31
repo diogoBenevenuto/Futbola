@@ -13,7 +13,9 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private Button pauseBtn, pauseBtn_Return;
     [SerializeField]
-    private Button btnNovamente, btnMenu;
+    private Button btnNovamenteLose, btnMenuLose; //btn Lose
+
+    private Button btnMenuWin, btnNovamenteWin, btnAvancaWin; //btn Win
 
     public int moedasNumAntes, moedasNumDepois, resultado;
 
@@ -35,25 +37,42 @@ public class UiManager : MonoBehaviour
 
     void MostraMoeda(Scene cena, LoadSceneMode modo)
     {
-        pontoUI = GameObject.Find("PontoUI").GetComponent<Text> ();
-        bolasUI = GameObject.Find("bolasUI").GetComponent<Text> ();
-        losePainel = GameObject.Find("LosePainel");
-        winPainel = GameObject.Find("WinPainel");
-        pausePainel = GameObject.Find("PausePainel");
-        pauseBtn = GameObject.Find("pause").GetComponent<Button> ();
-        pauseBtn_Return = GameObject.Find("BtnPlay").GetComponent <Button> ();
-        btnNovamente = GameObject.Find("BtnNovamente").GetComponent<Button>();
-        btnMenu = GameObject.Find("BtnMenu").GetComponent<Button>();
+        if (OndeEstou.instance.fase != 4)
+        {
+            //elementos da UI
+            pontoUI = GameObject.Find("PontoUI").GetComponent<Text>();
+            bolasUI = GameObject.Find("bolasUI").GetComponent<Text>();
+            //Paineis
+            losePainel = GameObject.Find("LosePainel");
+            winPainel = GameObject.Find("WinPainel");
+            pausePainel = GameObject.Find("PausePainel");
+            // btn pause
+            pauseBtn = GameObject.Find("pause").GetComponent<Button>();
+            pauseBtn_Return = GameObject.Find("BtnPlay").GetComponent<Button>();
+            //btn lose
+            btnNovamenteLose = GameObject.Find("BtnNovamenteLOSE").GetComponent<Button>();
+            btnMenuLose = GameObject.Find("BtnFazesLOSE").GetComponent<Button>();
+            // btn win
+            btnMenuWin = GameObject.Find ("BtnMenuWIN").GetComponent<Button>();
+            btnNovamenteWin = GameObject.Find("BtnNovamenteWIN").GetComponent<Button>();
+            btnAvancaWin = GameObject.Find("BtnAvancarWIN").GetComponent<Button>();
 
-        LigaDesligaPainel();
+            //eventos
 
-        pauseBtn.onClick.AddListener (Pause);
-        pauseBtn_Return.onClick.AddListener (PauseReturn);
+            //eventos pause
+            pauseBtn.onClick.AddListener(Pause);
+            pauseBtn_Return.onClick.AddListener(PauseReturn);
 
-        //you lose
+            //eventos you lose
+            btnNovamenteLose.onClick.AddListener(JogarNovamente);
+            btnMenuLose.onClick.AddListener(Levels);
 
-        btnNovamente.onClick.AddListener(JogarNovamente);
-        moedasNumAntes = PlayerPrefs.GetInt("moedasSave");
+            // eventos you win
+            btnMenuWin.onClick.AddListener(Levels);
+            btnNovamenteWin.onClick.AddListener(JogarNovamente);
+            btnAvancaWin.onClick.AddListener(ProximaFase);
+            moedasNumAntes = PlayerPrefs.GetInt("moedasSave");
+        }
     }
     
     public void StartUI()
@@ -112,9 +131,42 @@ public class UiManager : MonoBehaviour
 
     void JogarNovamente()
     {
-        SceneManager.LoadScene(GameManager.instance.ondeEstou);
-        resultado = moedasNumDepois - moedasNumAntes;
-        ScoreManager.instance.PerdeMoedas(resultado);
-        resultado = 0;
+        if (GameManager.instance.win == false)
+        {
+            SceneManager.LoadScene (OndeEstou.instance.fase);
+            resultado = moedasNumDepois - moedasNumAntes;
+            ScoreManager.instance.PerdeMoedas(resultado);
+            resultado = 0;
+        }
+        else
+        {
+            SceneManager.LoadScene(OndeEstou.instance.fase);
+            resultado = 0;
+        }
+    }
+
+    void Levels()
+    {
+        if(GameManager.instance.win == false)
+        {
+            resultado = moedasNumDepois - moedasNumAntes;
+            ScoreManager.instance.PerdeMoedas(resultado);
+            resultado = 0;
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            resultado = 0;
+            SceneManager.LoadScene(4);
+        }
+    }
+
+    void ProximaFase()
+    {
+        if(GameManager.instance.win == true)
+        {
+            int temp = OndeEstou.instance.fase + 1;
+            SceneManager.LoadScene(temp);
+        }
     }
 }
