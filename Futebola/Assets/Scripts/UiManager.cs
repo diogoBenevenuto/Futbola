@@ -32,10 +32,16 @@ public class UiManager : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += MostraMoeda;
-        
+        PegaDados();
+
     }
 
     void MostraMoeda(Scene cena, LoadSceneMode modo)
+    {
+        PegaDados();
+    }
+
+    void PegaDados()
     {
         if (OndeEstou.instance.fase != 4)
         {
@@ -53,7 +59,7 @@ public class UiManager : MonoBehaviour
             btnNovamenteLose = GameObject.Find("BtnNovamenteLOSE").GetComponent<Button>();
             btnMenuLose = GameObject.Find("BtnFazesLOSE").GetComponent<Button>();
             // btn win
-            btnMenuWin = GameObject.Find ("BtnMenuWIN").GetComponent<Button>();
+            btnMenuWin = GameObject.Find("BtnMenuWIN").GetComponent<Button>();
             btnNovamenteWin = GameObject.Find("BtnNovamenteWIN").GetComponent<Button>();
             btnAvancaWin = GameObject.Find("BtnAvancarWIN").GetComponent<Button>();
 
@@ -74,8 +80,7 @@ public class UiManager : MonoBehaviour
             moedasNumAntes = PlayerPrefs.GetInt("moedasSave");
         }
     }
-    
-    public void StartUI()
+public void StartUI()
     {
         LigaDesligaPainel();
     }

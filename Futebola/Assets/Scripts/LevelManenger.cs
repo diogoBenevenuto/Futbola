@@ -59,8 +59,8 @@ public class LevelManenger : MonoBehaviour
 
     void Awake ()
     {
-        Destroy(GameObject.Find("UiManager"));
-        Destroy(GameObject.Find("GameManager"));
+        Destroy(GameObject.Find("UiManager(Clone)"));
+        Destroy(GameObject.Find("GameManager(Clone)"));
     }
 
 

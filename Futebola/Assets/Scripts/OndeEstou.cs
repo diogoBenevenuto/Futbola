@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class OndeEstou : MonoBehaviour
 {
-    public int fase;
+    public int fase = -1;
+    [SerializeField]
+    private GameObject UiManagerGO, GameManagerGO;
+
     public static OndeEstou instance;
 
-    private void Awake()
+     void Awake()
     {
         if(instance == null)
         {
@@ -26,6 +29,11 @@ public class OndeEstou : MonoBehaviour
     void VerificaFase(Scene cena, LoadSceneMode modo)
     {
         fase = SceneManager.GetActiveScene().buildIndex;
+        if(fase != 4)
+        {
+            Instantiate(UiManagerGO);
+            Instantiate(GameManagerGO);
+        }
     }
 
 }
