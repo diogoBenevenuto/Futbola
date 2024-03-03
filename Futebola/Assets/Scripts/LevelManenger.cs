@@ -41,11 +41,8 @@ public class LevelManenger : MonoBehaviour
                 }
 
                 btnNew.desbloquadoBTN = level.desbloqueado;
-
                 btnNew.GetComponent<Button>().interactable = level.habilitado;
-
                 btnNew.GetComponentInChildren<Text>().enabled = level.txtAtivo;
-
                 btnNew.GetComponent<Button>().onClick.AddListener(() => ClickLevel("Level"+btnNew.levelTxtBTN.text));
 
                 btnNovo.transform.SetParent(localBtn, false);
@@ -66,7 +63,7 @@ public class LevelManenger : MonoBehaviour
 
     void Start()
     {
-       // PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         ListaAdd();
     }
 

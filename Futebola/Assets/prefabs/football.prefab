@@ -139,7 +139,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aedafa1537089354bace4c1b93767805, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -183,10 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a610e36221749dc4eb1a67d018725b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPosition: {fileID: 0}
   arrowGO: {fileID: 0}
   zRotate: 0
   liberaRot: 0
   liberaBola: 0
   force: 0
   seta2Img: {fileID: 0}
+  KillBallAnim: {fileID: 8140551819181658395, guid: b69735857db679644b4d7ec41fb7dc08, type: 3}

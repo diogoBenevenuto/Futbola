@@ -20,6 +20,10 @@ public class BolaControll : MonoBehaviour
 
     //Paredes
     private Transform paredeLD,paredeLE;
+
+    //KillBall Anim
+    [SerializeField]
+    private GameObject KillBallAnim;
     void Awake()
     {
         arrowGO = GameObject.Find ("Arrow");
@@ -161,6 +165,7 @@ public class BolaControll : MonoBehaviour
         }
     }
 
+
     void BolaDinamica()
     {
         this.gameObject.GetComponent<Rigidbody2D> ().isKinematic = false;
@@ -186,13 +191,18 @@ public class BolaControll : MonoBehaviour
     {
         if(other.gameObject.CompareTag("morte"))
         {
-            Destroy (this.gameObject);
+            Instantiate(KillBallAnim, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
             GameManager.instance.bolasInScene -= 1;
             GameManager.instance.bolasNum -= 1;
+
         }
         if(other.gameObject.CompareTag("win"))
         {
             GameManager.instance.win = true;
+            int temp = OndeEstou.instance.fase +1;
+            temp++;
+            PlayerPrefs.SetInt("Level"+temp, 1);
         }
     }
 }
