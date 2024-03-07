@@ -2927,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 7389315072781789495, guid: 4674c74ced6b145449c506dd3355d7e0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4155,10 +4159,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1108696642462128808, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_SortingOrder
-      value: 99
-      objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4206,30 +4206,6 @@ PrefabInstance:
     - target: {fileID: 5840747007056920130, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_Name
       value: Espetos (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840747007056920130, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TagString
-      value: morte
-      objectReference: {fileID: 0}
-    - target: {fileID: 6275728077355237953, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 1.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -2.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TranslationLimits.m_LowerTranslation
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TranslationLimits.m_UpperTranslation
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4379,21 +4355,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1108696642462128808, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_SortingOrder
-      value: 99
-      objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2468
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.637004
+      value: -3.86
       objectReference: {fileID: 0}
     - target: {fileID: 5346926781655139266, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4431,29 +4403,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Espetos
       objectReference: {fileID: 0}
-    - target: {fileID: 5840747007056920130, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TagString
-      value: morte
-      objectReference: {fileID: 0}
-    - target: {fileID: 6275728077355237953, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 1.2468
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -3.637004
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TranslationLimits.m_LowerTranslation
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019068770560648138, guid: b487341a74d6adf48bef245d9f4cfe39, type: 3}
-      propertyPath: m_TranslationLimits.m_UpperTranslation
-      value: 1.5
+      value: -3.86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4471,18 +4427,6 @@ PrefabInstance:
     - target: {fileID: 233801840825631383, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 233801840825631383, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4153199
-      objectReference: {fileID: 0}
-    - target: {fileID: 233801840825631383, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.41659826
-      objectReference: {fileID: 0}
-    - target: {fileID: 233801840825631383, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4203826
       objectReference: {fileID: 0}
     - target: {fileID: 233801840825631383, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4527,38 +4471,6 @@ PrefabInstance:
     - target: {fileID: 6133995045350688614, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
       propertyPath: m_Name
       value: EspetoMenor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6133995045350688614, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_TagString
-      value: morte
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 4.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -2.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_AutoConfigureAngle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_TranslationLimits.m_LowerTranslation
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314963550849187225, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_TranslationLimits.m_UpperTranslation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9181836288214120068, guid: 36d32a2ee32cd5045b5c6e97dfdae3d7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

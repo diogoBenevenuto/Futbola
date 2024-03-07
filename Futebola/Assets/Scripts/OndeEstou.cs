@@ -29,7 +29,8 @@ public class OndeEstou : MonoBehaviour
     void VerificaFase(Scene cena, LoadSceneMode modo)
     {
         fase = SceneManager.GetActiveScene().buildIndex;
-        if(fase != 4)
+
+        if(fase != 4 && fase != 5)
         {
             Instantiate(UiManagerGO);
             Instantiate(GameManagerGO);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4848377310089753902}
   - component: {fileID: 2510672023589532408}
   - component: {fileID: 1820615678151152556}
+  - component: {fileID: 2861574935150406553}
   m_Layer: 0
   m_Name: KillBall
   m_TagString: Untagged
@@ -106,3 +107,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2861574935150406553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140551819181658395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec23261a39e16e74389a3c6162ab49b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

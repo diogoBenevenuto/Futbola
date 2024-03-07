@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7919361729290137452}
   m_Layer: 0
   m_Name: Espetos
-  m_TagString: Untagged
+  m_TagString: morte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5840747007056920130}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7063604, w: 0.7078524}
+  m_LocalRotation: {x: 0, y: 0, z: 0.70635974, w: 0.7078531}
   m_LocalPosition: {x: 3.14, y: -4.3017, z: 0}
   m_LocalScale: {x: 0.32862794, y: 0.41217554, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.879}
 --- !u!212 &1108696642462128808
 SpriteRenderer:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: 21300000, guid: 3a7a42b060ec85b49b6ed2e1a6bf0e3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -176,7 +176,7 @@ SliderJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.14, y: -4.32}
+  m_ConnectedAnchor: {x: 3.2249835, y: -1.4798713}
   m_AutoConfigureAngle: 0
   m_Angle: 90
   m_UseMotor: 1
