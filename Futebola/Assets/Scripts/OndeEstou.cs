@@ -11,6 +11,7 @@ public class OndeEstou : MonoBehaviour
 
     public static OndeEstou instance;
 
+    public int ballInUse;
      void Awake()
     {
         if(instance == null)
@@ -24,6 +25,8 @@ public class OndeEstou : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += VerificaFase;
+
+        ballInUse = PlayerPrefs.GetInt("ballUse");
     }
 
     void VerificaFase(Scene cena, LoadSceneMode modo)

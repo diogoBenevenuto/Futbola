@@ -25,6 +25,7 @@ public class BallShop : MonoBehaviour
     void Start()
     {
         FillList();
+        //PlayerPrefs.DeleteAll();
     }
 
     
@@ -54,10 +55,21 @@ public class BallShop : MonoBehaviour
                 b.buyBalls = true;
             }
 
+            if(PlayerPrefs.HasKey("BTNS"+item.ballID) && b.buyBalls)
+            {
+                item.btnBuy.GetComponent<BuyBalls>().btnText.text = PlayerPrefs.GetString("BTNS" + item.ballID);
+            }
+
             if(b.buyBalls == true)
             {
                 item.spriteBall.sprite = Resources.Load<Sprite>("Ball/" + b.NamespriteBalls);
-                item.priceBall.text = "Comprado!";
+                item.priceBall.text = "Purchased!";
+
+                if(PlayerPrefs.HasKey("BTNS"+item.ballID) == false)
+                {
+                    item.btnBuy.GetComponent<BuyBalls>().btnText.text = "Using";
+                }
+
             }
             else
             {
@@ -81,7 +93,7 @@ public class BallShop : MonoBehaviour
                         if (ballsList[j].buyBalls == true)
                         {
                             suportBallsScript.spriteBall.sprite = Resources.Load<Sprite>("Ball/" + ballsList[j].NamespriteBalls);
-                            suportBallsScript.priceBall.text = "Comprado!";
+                            suportBallsScript.priceBall.text = "Purchased!";
                             SaveBallShopInfo(suportBallsScript.ballID);
                         }
                         else
@@ -104,6 +116,19 @@ public class BallShop : MonoBehaviour
             if(ballSup.ballID == idBall)
             {
                 PlayerPrefs.SetInt("BTN" + ballSup.ballID,ballSup.btnBuy ? 1 : 0);
+            }
+        }
+    }
+
+    public void SaveBallShopText(int idBall, string s )
+    {
+        for(int i = 0; i < ballsList.Count; i++)
+        {
+            SuportBalls ballsSup = suportBallList[i].GetComponent<SuportBalls>();
+
+            if(ballsSup.ballID == idBall)
+            {
+                PlayerPrefs.SetString("BTNS" + ballsSup.ballID, s);
             }
         }
     }

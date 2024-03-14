@@ -7,7 +7,7 @@ public class TesteAbrir : MonoBehaviour
     
     void Start()
     {
-        PlayerPrefs.SetInt ("Level2",1);
+        //PlayerPrefs.SetInt ("Level2",1);
     }
 
     

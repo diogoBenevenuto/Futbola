@@ -44,7 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71ccb9ef32fe1748b84411a6e685e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bola: {fileID: 5164934722114046218, guid: fe6a7813a0be6b3459f6681f9ff58119, type: 3}
+  bola:
+  - {fileID: 5164934722114046218, guid: 0b2b277c2f162c445ac63b422de8aa91, type: 3}
+  - {fileID: 5164934722114046218, guid: 77cb7741cd2f28b45b0056a74d4e071b, type: 3}
+  - {fileID: 5164934722114046218, guid: 86d830675dc638a478adc8d6012560cf, type: 3}
+  - {fileID: 5164934722114046218, guid: d80222c9d37e92d448daff54dafaa5d9, type: 3}
+  - {fileID: 5164934722114046218, guid: 5dec820b96c12f7429524773f7ed7474, type: 3}
+  - {fileID: 5164934722114046218, guid: 5a35c6a11b7d4b74196c28fd05b5bfb7, type: 3}
   bolasNum: 2
   bolasInScene: 0
   pos: {fileID: 0}

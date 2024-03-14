@@ -9,6 +9,7 @@ public class UiManagerLevels : MonoBehaviour
     private Text moedasLevel;
     void Start()
     {
+        ScoreManager.instance.UpdateScore();
         moedasLevel.text = PlayerPrefs.GetInt("moedasSave").ToString();
     }
 
