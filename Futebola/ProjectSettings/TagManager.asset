@@ -9,6 +9,8 @@ TagManager:
   - morte
   - win
   - falid
+  - barraAnimTag
+  - menuInfo
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,9 @@ public class BolaControll : MonoBehaviour
     //Paredes
     private Transform paredeLD,paredeLE;
 
+    public float velocidadeMinima = 0.01f;
+    private bool chutou = false;
+
     //KillBall Anim
     [SerializeField]
     private GameObject KillBallAnim;
@@ -54,10 +57,35 @@ public class BolaControll : MonoBehaviour
         apliForce ();
         // Paredes
         Paredes();
+
+        DestroiBolaParada();
         
+        if (chutou && Ball.velocity.magnitude > velocidadeMinima)
+        {
+            liberaBola = false;
+        }
+
     }
 
-    void PosicionaArrow()
+    void DestroiBolaParada()
+    {
+        
+        if (chutou && Ball.velocity.magnitude <= velocidadeMinima && !GameManager.instance.win)
+        {
+            Instantiate(KillBallAnim, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+            GameManager.instance.bolasInScene -= 1;
+            GameManager.instance.bolasNum -= 1;
+        }
+    }
+
+    IEnumerator DelayChute()
+    {
+        
+        yield return new WaitForSeconds(0.3f);
+        chutou = true;
+    }
+        void PosicionaArrow()
     {
         arrowGO.GetComponent<Image>().rectTransform.position = transform.position;
     }
@@ -142,9 +170,12 @@ public class BolaControll : MonoBehaviour
        if(liberaBola == true)
         {
             Ball.AddForce (new Vector2 (x, y));
+            StartCoroutine(DelayChute());
             liberaBola = false;
         }
     }
+
+
 
     void ControlaForca()
     {
@@ -189,7 +220,7 @@ public class BolaControll : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.gameObject.CompareTag("morte"))
+        if(other.gameObject.CompareTag("morte") && !GameManager.instance.win)
         {
             Instantiate(KillBallAnim, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
